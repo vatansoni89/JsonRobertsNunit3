@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loans", "Loans\Loans.csproj", "{0D3BF21B-51F5-4A43-AC06-66F5031BA5A1}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loans.Tests", "Loans.Tests\Loans.Tests.csproj", "{8B42C2EA-5CF3-41C9-A77D-DD999EE6F482}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "nunit.framework", "..\..\RealNunitCodeFromGitHub\nunit\src\NUnitFramework\framework\nunit.framework.csproj", "{36A49AFE-807A-4263-9B42-E1E1B9B14641}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{0D3BF21B-51F5-4A43-AC06-66F5031BA5A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D3BF21B-51F5-4A43-AC06-66F5031BA5A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D3BF21B-51F5-4A43-AC06-66F5031BA5A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B42C2EA-5CF3-41C9-A77D-DD999EE6F482}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B42C2EA-5CF3-41C9-A77D-DD999EE6F482}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B42C2EA-5CF3-41C9-A77D-DD999EE6F482}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B42C2EA-5CF3-41C9-A77D-DD999EE6F482}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36A49AFE-807A-4263-9B42-E1E1B9B14641}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36A49AFE-807A-4263-9B42-E1E1B9B14641}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36A49AFE-807A-4263-9B42-E1E1B9B14641}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36A49AFE-807A-4263-9B42-E1E1B9B14641}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
