@@ -48,7 +48,6 @@ namespace Loans.Tests
                                      new LoanTerm(termInYears));
 
             //Assert.That(monthlyPayment, Is.EqualTo(expectedMonthlyPayment));
-            //
         }
 
         /// <summary>
