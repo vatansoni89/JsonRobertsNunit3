@@ -1,0 +1,21 @@
+Domain:
+  Entity:
+    Id: 
+  ValueObject:
+    No Id here
+	LoanAmount:
+	  Equal if they have same CurrencyCode and Principle
+  Test:
+    Nuget-Packages:
+	  - NUnit
+      - NUnit 3 Test Adapter
+      - Microsoft.NET.Test.Sdk
+    Attributes:
+	  [TestFixture]
+	  [Test]
+    Command Line:
+	  Shift + Right Click then select Open in Powershell
+	  dotnet test: build proj and run all tests
+	  dotnet test --list-tests: given list of available tests
+	  dotnet test /?: gives options
+
