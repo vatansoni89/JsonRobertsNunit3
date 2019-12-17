@@ -11,11 +11,65 @@ Domain:
       - NUnit 3 Test Adapter
       - Microsoft.NET.Test.Sdk
     Attributes:
-	  [TestFixture]
-	  [Test]
+	  [TestFixture]: Mark a class that contain test.
+	  [Test]: Mark a method as test
+	  [Category]: Organize test in category
+	  [TestCase]: data driven test cases
+	  [Values]: data driven test parameters
+	  [Sequential]: How to combine test data
+	  [SetUp]: Run code before each test
+	  [OneTimeSetUp]: Run code before first test in class
     Command Line:
 	  Shift + Right Click then select Open in Powershell
 	  dotnet test: build proj and run all tests
 	  dotnet test --list-tests: given list of available tests
 	  dotnet test /?: gives options
+	Assertions:
+	  Constraint-Model(Newer):
+	    Assert.That(test result, constraint instance);
+	  Classic-Model:
+	    Assert.AreEqual(1, sut.Years);
+		Assert.NotNull(sut.Years);
+	  Assert: http://bit.ly/nunit3asserts
+	    value-type: Is.EqualTo()
+		ref-type: to check if ref are equal (pointing to same object): Assert.That(a, Is.SameAs(b)) 
+		float: Within gives tolerance range, so not exact match is required.
+          Assert.That(a, Is.EqualTo(0.33).Within(0.004)) 
+		  OR Assert.That(a, Is.EqualTo(0.33).Within(10).Percent) //10 is tolerance range
+		collection:
+		  - Has.Exactly(n).Items
+		  - Has.Exactly(1<number of items>).Property("ProductName").EqualTo("A").And.Property("InterestRate").EqualTo(1).And.Property---can be Repeated---
+		  - Is.Unique
+		  - Lymbda expression for assertion:
+		      Assert.That(obj, Has.Exactly(1).Matches<ClassName>(item => item.ProductName=="a" && item.InterestRate == 1 && item.MonthlyRepayment > 0))
+		Exception:
+		  - Assert.That(() => new LoanTerm(0), Throws.TypeOf<ArgumentOutOfRangeException>())
+		  - Assert.That(() => new LoanTerm(0), Throws.TypeOf<ArgumentOutOfRangeException>().With.Property("Message").EqualTo("plz specify value greater than 0"))
+		String:
+		  Assert.That(name, Is.Empty)
+		  Assert.That(name, Is.Not.Empty)
+		  Assert.That(name, Is.equalTo("Sarah")) //case sencitive
+		  Assert.That(name, Is.equalTo("Sarah").IgnoreCase)
+		  Assert.That(name, Does.StartWith("Sa"))
+		  Assert.That(name, Does.EndWith("ah"))
+		  Assert.That(name, Does.Contain("ara"))
+		  Assert.That(name, Does.Not.Contain("Vatan"))
+		  Assert.That(name, Does.StartWith("Sa").And.EndsWith("ah"))
+		  Assert.That(name, Does.StartWith("Sa").Or.EndsWith("ah"))
+	    Int:
+		  Ranges:
+		    Assert.That(i, Is.GreaterThan(42))
+			Assert.That(i, Is.InRange(40,50))
+		DateTime:
+		  Assert.That(date1, IsEqualTo(date2))
+		  Assert.That(date1, IsEqualTo(date2).Within(4).Days)
+		  
+
+
+
+
+		  
+
+
+
 
