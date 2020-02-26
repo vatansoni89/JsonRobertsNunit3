@@ -67,6 +67,7 @@ Domain:
 		  br1Test
 		  soni
 		  frmBrnch1
+		  frmMaster
 		  
 
 
