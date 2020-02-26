@@ -4,7 +4,7 @@ Domain:
   ValueObject:
     No Id here
 	LoanAmount:
-	  Equal if they have same CurrencyCode and Principle
+	  Equal if they have same CurrencyCode and Principle.
   Test:
     Nuget-Packages:
 	  - NUnit
